@@ -63,7 +63,7 @@ Tabel analisa dibangun dari hasil agregasi/join keempat tabel sumber memuat kolo
 - > 300.000–500.000 → **25%**
 - > 500.000 → **30%**
 
-Implementasi SQL tersedia di `sql/03_create_table_analisa.sql`.
+Implementasi SQL tersedia di `sql/create_table_analisa.sql`.
 
 ---
 
@@ -119,7 +119,6 @@ Gunakan `sql/quality_checks.sql` untuk memeriksa:
 │  ├─ DataDictionary.md
 │  ├─ ERD.md
 │  ├─ DashboardGuide.md
-│  └─ SubmissionChecklist.md
 ├─ .github/
 │  ├─ ISSUE_TEMPLATE/
 │  └─ PULL_REQUEST_TEMPLATE.md
