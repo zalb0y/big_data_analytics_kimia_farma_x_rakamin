@@ -125,6 +125,10 @@ Gunakan `sql/quality_checks.sql` untuk memeriksa:
 ├─ LICENSE
 └─ Makefile
 ```
+📈 Dashboard Visualization
+Dashboard Interaktif Performance Analytics Kimia Farma dibuat menggunakan Looker Studio.
+
+[Lihat Dashboard nya disini](https://lookerstudio.google.com/reporting/c5690a88-73ed-49c1-a846-2cc428f445ab)
 
 ---
 
