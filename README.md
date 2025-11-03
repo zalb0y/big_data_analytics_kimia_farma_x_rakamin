@@ -29,7 +29,7 @@ mengidentifikasi tren, _outliers_, serta peluang perbaikan operasional maupun ko
 
 ## 🗃️ Sumber Data
 
-Empat dataset utama yang diimpor ke BigQuery (nama tabel **sama** dengan nama file tanpa “.csv”):
+Empat dataset utama yang diimpor ke BigQuery:
 
 - `kf_final_transaction.csv` — transaksi: `transaction_id`, `product_id`, `branch_id`, `customer_name`, `date`,
   `price`, `discount_percentage`, `rating`.
