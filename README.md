@@ -37,8 +37,6 @@ Empat dataset utama yang diimpor ke BigQuery:
 - `kf_kantor_cabang.csv` — master cabang: `branch_id`, `branch_category`, `branch_name`, `kota`, `provinsi`, `rating`.
 - `kf_inventory.csv` — stok inventori: `inventory_id`, `branch_id`, `product_id`, `product_name`, `opname_stock`.
 
-> **Catatan**: Deskripsi kolom di atas dirangkum dari dokumen _Hints_ (Data Dictionary).
-
 ---
 
 ## 🧱 Tabel Analisa (Mandatory Columns)
@@ -70,7 +68,7 @@ Implementasi SQL tersedia di `sql/create_table_analisa.sql`.
 ## 📊 Dashboard (Google Looker Studio)
 
 Dashboard **Performance Analytics Kimia Farma 2020–2023** dibangun dari `tabel_analisa` dan _views_
-pendukung. **Komponen Utama** (sesuai brief _Challenging_):  
+pendukung. **Komponen Utama**:  
 
 - **Judul** & **Summary** (ringkasan metrik)  
 - **Filter Control** (mis. Tahun, Provinsi, Cabang, Kategori Produk)  
