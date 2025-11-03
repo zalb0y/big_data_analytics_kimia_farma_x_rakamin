@@ -70,7 +70,7 @@ Implementasi SQL tersedia di `sql/create_table_analisa.sql`.
 ## 📊 Dashboard (Google Looker Studio)
 
 Dashboard **Performance Analytics Kimia Farma 2020–2023** dibangun dari `tabel_analisa` dan _views_
-pendukung. **Komponen minimal** (sesuai brief _Challenging_):  
+pendukung. **Komponen Utama** (sesuai brief _Challenging_):  
 
 - **Judul** & **Summary** (ringkasan metrik)  
 - **Filter Control** (mis. Tahun, Provinsi, Cabang, Kategori Produk)  
@@ -78,7 +78,7 @@ pendukung. **Komponen minimal** (sesuai brief _Challenging_):
 - **Perbandingan Pendapatan YoY** (time series)  
 - **Top 10 Total Transaksi per Provinsi** (bar chart)  
 - **Top 10 Nett Sales per Provinsi** (bar chart)  
-- **Top 5 Cabang** _Rating Cabang Tinggi_ namun _Rating Transaksi Rendah_ (table)  
+- **Top 10 Cabang** _Rating Cabang Tinggi_ namun _Rating Transaksi Rendah_ (table)  
 - **Geo Map Indonesia** — **Total Profit per Provinsi**  
 
 _SQL views_ untuk masing-masing visual telah disediakan di `sql/views/`:
