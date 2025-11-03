@@ -1,0 +1,29 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node/Front-end (if any)
+node_modules/
+
+# OS/Editor
+.vscode/
+.idea/
+
+# Data / secrets (jangan commit data sensitif)
+*.csv
+*.parquet
+*.xlsx
+*.zip
+.env
+secrets.*

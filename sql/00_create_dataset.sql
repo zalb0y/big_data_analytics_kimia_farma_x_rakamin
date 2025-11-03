@@ -1,0 +1,3 @@
+-- Create dataset (alternative to CLI). Adjust LOCATION as needed.
+-- BigQuery does not support CREATE SCHEMA IF NOT EXISTS via standard SQL.
+-- Prefer CLI: bq --location=US mk --dataset PROJECT_ID:kimia_farma
