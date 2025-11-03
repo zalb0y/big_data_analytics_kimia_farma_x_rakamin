@@ -4,7 +4,7 @@ Big Data Analytics X Rakamin | Google BigQuery + Looker Studio
 
 Repository ini berisi _end-to-end_ materi untuk **analisis kinerja bisnis Kimia Farma tahun 2020–2023**:
 skrip SQL BigQuery (setup dataset & load data, pembuatan `tabel_analisa`, dan views untuk dashboard),
-panduan Looker Studio, _quality checks_, serta checklist final submission.
+panduan Looker Studio, _quality checks_.
 
 > **Tujuan**  
 > Mengevaluasi performa bisnis Kimia Farma 2020–2023 dan menyajikan insight yang dapat ditindaklanjuti
@@ -43,7 +43,7 @@ Empat dataset utama yang diimpor ke BigQuery (nama tabel **sama** dengan nama fi
 
 ## 🧱 Tabel Analisa (Mandatory Columns)
 
-Tabel analisa dibangun dari hasil agregasi/join keempat tabel sumber dan **WAJIB** memuat kolom berikut:
+Tabel analisa dibangun dari hasil agregasi/join keempat tabel sumber memuat kolom berikut:
 
 - `transaction_id`, `date`
 - `branch_id`, `branch_name`, `kota`, `provinsi`, `rating_cabang`
@@ -92,44 +92,10 @@ _SQL views_ untuk masing-masing visual telah disediakan di `sql/views/`:
 
 ## 🧪 Quality Checks
 
-Gunakan `sql/99_quality_checks.sql` untuk memeriksa:
+Gunakan `sql/quality_checks.sql` untuk memeriksa:
 - **NULL check** pada kolom wajib
 - **Duplikat** `transaction_id`
 - **Sanity ranges** (min–max date, price, diskon, margin)
-
----
-
-## 🛠️ Quickstart Replikasi
-
-> Pastikan **Google Cloud SDK** terpasang dan Anda sudah **login** ke project GCP.
-
-```bash
-# 1) Set project & enable BigQuery API
-gcloud config set project <PROJECT_ID>
-gcloud services enable bigquery.googleapis.com
-
-# 2) Buat dataset (samakan lokasi dengan bucket Anda)
-bq --location=US mk --dataset "<PROJECT_ID>:kimia_farma"
-
-# 3) (Opsional) Unggah 4 CSV ke Cloud Storage
-gsutil mb -l US gs://<BUCKET_NAME>
-gsutil cp path/ke/*.csv gs://<BUCKET_NAME>/
-
-# 4) Load tabel sumber (autodetect)
-bq load --autodetect --source_format=CSV "<PROJECT_ID>:kimia_farma.kf_final_transaction" gs://<BUCKET_NAME>/kf_final_transaction.csv
-bq load --autodetect --source_format=CSV "<PROJECT_ID>:kimia_farma.kf_product"          gs://<BUCKET_NAME>/kf_product.csv
-bq load --autodetect --source_format=CSV "<PROJECT_ID>:kimia_farma.kf_kantor_cabang"    gs://<BUCKET_NAME>/kf_kantor_cabang.csv
-bq load --autodetect --source_format=CSV "<PROJECT_ID>:kimia_farma.kf_inventory"        gs://<BUCKET_NAME>/kf_inventory.csv
-
-# 5) Build tabel analisa & views
-bq query --use_legacy_sql=false < sql/03_create_table_analisa.sql
-for f in sql/views/*.sql; do bq query --use_legacy_sql=false < "$f"; done
-
-# 6) Jalankan quality checks
-bq query --use_legacy_sql=false < sql/99_quality_checks.sql
-```
-
-> **Tips**: Samakan **LOCATION** dataset dan bucket (mis. `US` atau `asia-southeast2`/Jakarta).
 
 ---
 
@@ -138,9 +104,9 @@ bq query --use_legacy_sql=false < sql/99_quality_checks.sql
 ```
 .
 ├─ sql/
-│  ├─ 01_load_tables_bq_cli.sh
-│  ├─ 03_create_table_analisa.sql
-│  ├─ 99_quality_checks.sql
+│  ├─ load_tables_bq_cli.sh
+│  ├─ create_table_analisa.sql
+│  ├─ quality_checks.sql
 │  └─ views/
 │     ├─ view_yearly_revenue_profit.sql
 │     ├─ view_top10_transactions_by_provinsi.sql
@@ -162,19 +128,6 @@ bq query --use_legacy_sql=false < sql/99_quality_checks.sql
 ├─ LICENSE
 └─ Makefile
 ```
-
----
-
-## ✅ Final Submission (yang harus disiapkan)
-
-Mengacu ke brief _Submission_: **PPT Final** (template resmi) yang berisi:
-- **Biodata Diri**
-- **Hasil Pengerjaan** (ringkasan insight & cuplikan dashboard)
-- **Link Folder/File Hasil Pengerjaan** (opsional)
-- **Link GitHub repository** (repo ini)
-- **Link Video Presentasi** (YouTube/Drive)
-
-> Nama file: `FinalTask_KimiaFarma_BDA_NamaLengkap.pptx`
 
 ---
 
