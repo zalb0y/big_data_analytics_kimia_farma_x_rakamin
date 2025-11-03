@@ -22,10 +22,5 @@
 - **tahun**: `EXTRACT(YEAR FROM date)`
 - **margin_rate**: `persentase_gross_laba/100` (Number → Percent)
 
-## Tips Desain
-- Gunakan warna netral, *grid layout* 2–3 kolom.
-- Selalu lampirkan catatan data: periode 2020–2023, diskon sebagai 0–100 (%).
-- Sertakan *data quality banner*: duplikasi/NULL = nol (cek via `sql/99_quality_checks.sql`).
-
 ## Validasi Akhir
 - Cross-check revenue/profit total vs. tabel summary (`view_yearly_revenue_profit`).
