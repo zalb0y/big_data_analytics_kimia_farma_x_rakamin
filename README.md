@@ -1,5 +1,7 @@
 # Kimia Farma — Business Performance Analytics (2020–2023)
 
+![Project Based Internship_Kimia_Farma](https://github.com/user-attachments/assets/8046b5c8-f1af-49ab-a25f-e03df654b6d1)
+
 Big Data Analytics Kimia Farma X Rakamin | Google BigQuery + Looker Studio
 
 Repository ini berisi _end-to-end_ untuk **analisis kinerja bisnis Kimia Farma tahun 2020–2023**:
