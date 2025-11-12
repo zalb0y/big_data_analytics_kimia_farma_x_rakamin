@@ -1,6 +1,10 @@
 # Kimia Farma — Business Performance Analytics (2020–2023)
 
 ![Project Based Internship_Kimia_Farma](https://github.com/user-attachments/assets/8046b5c8-f1af-49ab-a25f-e03df654b6d1)
+📈 Dashboard Visualization
+Dashboard Interaktif Performance Analytics Kimia Farma dibuat menggunakan Looker Studio.
+
+[Lihat Dashboard nya disini](https://lookerstudio.google.com/reporting/c5690a88-73ed-49c1-a846-2cc428f445ab)
 
 Big Data Analytics Kimia Farma X Rakamin | Google BigQuery + Looker Studio
 
@@ -127,13 +131,6 @@ Gunakan `sql/quality_checks.sql` untuk memeriksa:
 ├─ LICENSE
 └─ Makefile
 ```
-
-📈 Dashboard Visualization
-Dashboard Interaktif Performance Analytics Kimia Farma dibuat menggunakan Looker Studio.
-
-[Lihat Dashboard nya disini](https://lookerstudio.google.com/reporting/c5690a88-73ed-49c1-a846-2cc428f445ab)
-
----
 
 ## 📄 Lisensi
 
